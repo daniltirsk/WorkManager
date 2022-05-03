@@ -12,5 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val workRequest = OneTimeWorkRequest.Builder(WeatherWorker::class.java).build()
         WorkManager.getInstance(this).enqueue(workRequest)
+
+        // TODO: реализовать запрос погоды
+        // TODO: какие параметры позволяет задать WorkManager (макс число одновр заданий)
+        // TODO: реализовать выполнение заданий по очереди
+
     }
 }
